@@ -1,20 +1,19 @@
 (ns causal.models.spec
   (:require [yesql.core :refer [defqueries]]))
 
-(defn get-uri
-  []
-  (get (System/getenv) "CLEARDB_DATABSE_URI" " "))
+(defn get-sys-var
+  [varname default]
+  (get (System/getenv) varname default))
 
 (defn get-db-info
-  [uri]
-  (let [clear-db (clojure.string/split uri #"://|:|@|/|\?")]
-    {:db (get clear-db 4 "causal_dev")
-     :host (get clear-db 3 "localhost")
-     :user (get clear-db 1 "root")
-     :password (get clear-db 2 "password")
-     :port "3306"}))
+  []
+  {:db (get-sys-var "DATABASE_NAME" "causal_dev")
+   :host (get-sys-var "DATABASE_HOST" "localhost")
+   :user (get-sys-var "DATABASE_USER" "root")
+   :password (get-sys-var "DATABASE_PASSWORD" "password")
+   :port (get-sys-var "DATABASE_PORT" "3306")})
 
-(let [db-info (get-db-info (get-uri))]
+(let [db-info (get-db-info)]
   (def mysql-db {:classname "com.mysql.jdbc.Driver"
                  :subprotocol "mysql"
                  :subname (str "//" (:host db-info) ":" (:port db-info) "/" (:db db-info))

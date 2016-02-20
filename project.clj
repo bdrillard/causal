@@ -9,8 +9,9 @@
                  [buddy "0.10.0"]
                  [mysql/mysql-connector-java "5.1.6"]
                  [yesql "0.5.2"]
-                 [danlentz/clj-uuid "0.1.6"]]
-  :plugins [[lein-ring "0.8.12"]]
+                 [danlentz/clj-uuid "0.1.6"]] 
+  :plugins [[lein-ring "0.8.12"]
+            [lein-environ "1.0.2"]]
   :ring {:handler causal.handler/app
          :init causal.handler/init
          :destroy causal.handler/destroy}
