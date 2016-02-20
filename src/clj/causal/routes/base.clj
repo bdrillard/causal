@@ -4,7 +4,7 @@
             [compojure.core :refer :all]
             [causal.views.errors :as err]
             [causal.views.public :as pub]
-            [causal.views.users :as user]
+            [causal.routes.users :as user]
             [causal.models.users :refer [get-user-username get-user-email create-user]]))
 (defn home
   []
