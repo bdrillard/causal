@@ -11,6 +11,6 @@ CREATE TABLE IF NOT EXISTS users_orgs (
         REFERENCES users(id)
         ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY(org_id)
-        REFERENCES orgss(id)
+        REFERENCES orgs(id)
         ON UPDATE CASCADE ON DELETE CASCADE
 )

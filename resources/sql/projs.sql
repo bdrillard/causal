@@ -1,10 +1,10 @@
--- name: create-projects-table!
+-- name: create-projs-table!
 -- Initializes the table for projects
-CREATE TABLE IF NOT EXISTS projects (
+CREATE TABLE IF NOT EXISTS projs (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(64) NOT NULL,
     description TEXT,
-    data_created DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    data_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 
     PRIMARY KEY(id),
     INDEX(name),

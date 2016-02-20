@@ -5,10 +5,13 @@
             [hiccup.middleware :refer [wrap-base-url]]
             [compojure.handler :as handler]
             [compojure.route :as route]
+            [causal.models.migrations :refer [migrate]]
             [causal.routes.home :refer [home-routes]]))
 
 (defn init []
-  (println "causal is starting"))
+  (println "causal is starting")
+  (println "creating tables if necessary")
+  (migrate))
 
 (defn destroy []
   (println "causal is shutting down"))
