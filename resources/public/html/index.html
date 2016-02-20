@@ -11,10 +11,17 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="../css/styles.css" />	
-		
+	<link rel="stylesheet" type="text/css" href="../css/styles.css" />		
+	<style> 
+	body {
+		position: relative;
+	}
+	#casual {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+	#about {padding-top:50px;height:500px;color: #fff; background-color: #813ab3;}
+	#project {padding-top:50px;height:500px;color: #fff; background-color: #678f32;}
+	#contact {padding-top:50px;height:500px;color: #fff; background-color: #1114ff;}
+	</style>
 </head>
-
 	
 <body>	
 
@@ -28,7 +35,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span> 
 				</button>
-			<a class="navbar-brand" href="#">Causal</a>
+			<a class="navbar-brand" href="#causal">Causal</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
@@ -41,14 +48,14 @@
 </nav>  
 
 <!-- Banner -->
-<div class="jumbotron text-center">
+<div id="causal" class="jumbotron text-center">
 	<h1> Causal </h1>
 	<p> We believe that... </p>
 	
 </div>
 
 <!-- About -->
-<div class="container-fluid">
+<div id="about" class="container-fluid">
 	<div class="row">
 		<div class="col-sm-8">
 			<h2> About us </h2>
@@ -63,8 +70,8 @@
 </div>
 
 <!-- Open project -->
-<div class="container-fluid">
-	<h3> Open projects from the Orgnizations </h3>
+<div id="project" class="container-fluid">
+	<h3> Open projects from the Organizations </h3>
 	<table class ="table table-hover">
 		<thead>
 			<tr>
@@ -99,6 +106,12 @@
 	</table>
 </div>	
 
+<!-- Contact -->
+<div id="contact" class="container-fluid">
+	<h2>Contact</h2>
+	<p>Email: helpforfree@gmail.com</p>
+	<p>Phone: 1-911-435-7757</p>
+</div>
 	
 </body>
 </html>
