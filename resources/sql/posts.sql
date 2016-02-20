@@ -1,3 +1,4 @@
+-- name: create-posts-table!
 -- Initializes the table of posts for threads
 CREATE TABLE IF NOT EXISTS posts (
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT,

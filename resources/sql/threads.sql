@@ -1,3 +1,4 @@
+-- name: create-threads-table!
 -- Initializes the table of threads for discussing projects
 CREATE TABLE IF NOT EXISTS threads (
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT,

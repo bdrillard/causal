@@ -25,9 +25,12 @@
   (do 
     (create-attrs-table!)
     (create-orgs-table!)
+    (create-posts-table!)
     (create-projs-table!)
     (create-projs-attrs-table!)
     (create-roles-table!)
+    (create-threads-table!)
+    (create-threads-users-table!)
     (create-users-table!)
     (create-users-attrs-table!)
     (create-users-orgs-table!)

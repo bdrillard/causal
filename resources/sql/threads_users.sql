@@ -1,3 +1,4 @@
+-- name: create-threads-users-table!
 -- Initializes the threads_users table
 CREATE TABLE IF NOT EXISTS threads_users (
 	id INT UNSIGNED NOT NULL,
