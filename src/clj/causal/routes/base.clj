@@ -4,6 +4,7 @@
             [compojure.core :refer :all]
             [causal.views.errors :as err]
             [causal.views.public :as pub]
+            [causal.views.users :as user]
             [causal.models.users :refer [get-user-username get-user-email create-user]]))
 (defn home
   []
@@ -67,7 +68,7 @@
                     :last (get-in request [:form-params "last_name"])
                     :email email}]
         (create-user params)
-        (-> (redirect "/user")
+        (-> (redirect "/user/setup")
             (assoc :session updated-session))))))
 
 (defroutes base-routes
@@ -75,7 +76,7 @@
   (GET "/error-404" [] error-404)
   (GET "/error-403" [] error-403)
 
- ; (context "/user" [] user/user-routes)
+  (context "/user" [] user/user-routes)
 
   (GET "/register" [] register)
   (POST "/register" [] register-user)

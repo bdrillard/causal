@@ -17,4 +17,4 @@
 
 (defn index
   []
-  (render-resource "templates/index.mustache" {:title "Causal"}))
+  (render-resource "public/html/index.html" {:title "Causal"}))
