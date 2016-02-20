@@ -12,3 +12,4 @@ pom.xml
 *.swp
 .nrepl-port
 start.sh
+.lein-repl-history
