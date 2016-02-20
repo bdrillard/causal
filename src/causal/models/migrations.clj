@@ -13,6 +13,13 @@
 (defqueries "sql/users_projs.sql" {:connection mysql-db})
 (defqueries "sql/users_roles.sql" {:connection mysql-db})
 
+(def default-roles
+  [{:role 1 :name "admin"}
+   {:role 2 :name "moderator"}
+   {:role 3 :name "representative"}
+   {:role 4 :name "lead"}
+   {:role 5 :name "developer"}])
+
 (defn migrate
   []
   (do 
@@ -26,3 +33,8 @@
     (create-users-orgs-table!)
     (create-users-projs-table!)
     (create-users-roles-table!)))
+
+(defn populate
+  []
+  (doseq [role default-roles]
+    (insert-role! role)))

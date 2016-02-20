@@ -10,13 +10,15 @@
             [buddy.auth :refer [authenticated?]]
             [buddy.auth.backends.session :refer [session-backend]]
             [buddy.auth.middleware :refer [wrap-authentication wrap-authorization]]
-            [causal.models.migrations :refer [migrate]]
+            [causal.models.migrations :refer [migrate populate]]
             [causal.routes.base :refer [base-routes]]))
 
 (defn init []
   (println "causal is starting")
   (println "creating tables if necessary")
-  (migrate))
+  (migrate)
+  (println "inserting initial content")
+  (populate))
 
 (defn destroy []
   (println "causal is shutting down"))
