@@ -4,9 +4,12 @@
 
 (defqueries "sql/attrs.sql" {:connection mysql-db})
 (defqueries "sql/orgs.sql" {:connection mysql-db})
+(defqueries "sql/posts.sql" {:connection mysql-db})
 (defqueries "sql/projs.sql" {:connection mysql-db})
 (defqueries "sql/projs_attrs.sql" {:connection mysql-db})
 (defqueries "sql/roles.sql" {:connection mysql-db})
+(defqueries "sql/threads.sql" {:connection mysql-db})
+(defqueries "sql/threads_users.sql" {:connection mysql-db})
 (defqueries "sql/users.sql" {:connection mysql-db})
 (defqueries "sql/users_attrs.sql" {:connection mysql-db})
 (defqueries "sql/users_orgs.sql" {:connection mysql-db})
