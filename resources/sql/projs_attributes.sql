@@ -1,16 +1,16 @@
--- name: create-projs-attributes-table!
--- Initializes the table for projs_attributes
-CREATE TABLE IF NOT EXISTS users_attributes (
+-- name: create-projs-attrs-table!
+-- Initializes the table for projs_attrs
+CREATE TABLE IF NOT EXISTS users_attrs (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     proj_id INT UNSIGNED NOT NULL,
-    attribute_id INT UNSIGNED NOT NULL,
+    attr_id INT UNSIGNED NOT NULL,
 
     PRIMARY KEY(id),
 
     FOREIGN KEY(proj_id)
         REFERENCES projs(id)
         ON UPDATE CASCADE ON DELETE CASCADE,
-    FOREIGN KEY(attribute_id)
-        REFERENCES attributes(id)
+    FOREIGN KEY(attr_id)
+        REFERENCES attrs(id)
         ON UPDATE CASCADE ON DELETE CASCADE
 ) 

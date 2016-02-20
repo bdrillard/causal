@@ -1,6 +1,6 @@
--- name: create-attributes-table!
--- Intializes the table for attributes
-CREATE TABLE IF NOT EXISTS attributes (
+-- name: create-attrs-table!
+-- Intializes the table for attrs
+CREATE TABLE IF NOT EXISTS attrs (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(32) NOT NULL,
 
