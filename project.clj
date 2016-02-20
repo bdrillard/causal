@@ -4,6 +4,7 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [compojure "1.1.6"]
                  [hiccup "1.0.5"]
+                 [de.ubercode.clostache/clostache "1.4.0"]
                  [ring-server "0.3.1"]
                  [ring/ring-json "0.4.0"]
                  [buddy "0.10.0"]
