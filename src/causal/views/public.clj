@@ -2,15 +2,17 @@
   (:require [clostache.parser :refer [render-resource]]))
 
 (defn register
-  []
-  (let [body (render-resource "templates/register.mustache")]
-    (render-resource "templates/base.mustache" {:title "Register"} {:body body})))
+  ([]
+   (register nil))
+  ([errors]
+   (let [body (render-resource "templates/register.mustache" errors)]
+     (render-resource "templates/base.mustache" {:title "Register"} {:body body}))))
 
 (defn login
   ([]
    (login nil))
   ([errors]
-   (let [body (render-resource "templates/login.mustache")]
+   (let [body (render-resource "templates/login.mustache" errors)]
      (render-resource "templates/base.mustache" {:title "Login"} {:body body}))))
 
 (defn index

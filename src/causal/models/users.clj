@@ -4,9 +4,13 @@
 
 (defqueries "sql/users.sql" {:connection mysql-db})
 
-(defn get-user
+(defn get-user-username
   [username]
-  (first (select-user {:username username})))
+  (first (select-user-username {:username username})))
+
+(defn get-user-email
+  [email]
+  (first (select-user-email {:email email})))
 
 (defn create-user
   [params]

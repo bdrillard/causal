@@ -14,12 +14,17 @@ CREATE TABLE IF NOT EXISTS users (
     CONSTRAINT UNIQUE(email)
 )
 
--- name: select-user
+-- name: select-user-username
 -- Gets user info for a given username
 SELECT * FROM users
     WHERE username = :username
 
+-- name: select-user-email
+-- Gets user info for a given email
+SELECT * FROM users
+    WHERE email = :email
+
 -- name: insert-user!
 -- Create a new user
-INSERT INTO users (id, first, last, email, password, date_joined)
-    VALUES (NULL, :first, :last, :email, :password, NULL)
+INSERT INTO users (id, username, first, last, email, password, date_joined)
+    VALUES (NULL, :username, :first, :last, :email, :password, NULL)
