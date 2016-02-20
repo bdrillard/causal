@@ -5,6 +5,6 @@ CREATE TABLE IF NOT EXISTS roles (
     role TINYINT UNSIGNED NOT NULL,
     description VARCHAR(32),
     
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
     CONSTRAINT UNIQUE(role)
 )

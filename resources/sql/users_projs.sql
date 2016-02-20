@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS users_projs (
     proj_id INT UNSIGNED NOT NULL,
 
     PRIMARY KEY(id),
-    index(user_id),
+    INDEX(user_id),
 
     FOREIGN KEY(user_id)
         REFERENCES users(id)

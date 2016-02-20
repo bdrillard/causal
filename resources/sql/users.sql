@@ -8,6 +8,6 @@ CREATE TABLE IF NOT EXISTS users (
     password BINARY(60) NOT NULL,
     data_joined DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
     CONSTRAINT UNIQUE(email)
 )
