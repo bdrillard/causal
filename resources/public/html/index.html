@@ -70,40 +70,15 @@
 </div>
 
 <!-- Open project -->
-<div id="project" class="container-fluid">
-	<h3> Open projects from the Organizations </h3>
-	<table class ="table table-hover">
-		<thead>
-			<tr>
-			<th>ID #</th>
-			<th>Project Ideas</th>
-			<th>Descriptions</th>
-			<th>Numbers of bids </th>
-			</tr>
-		</thead>
-		
-		<tbody>
-			<tr>
-			<td>123532</td>
-			<td>EXPO</td>
-			<td>Technical I don't know what to write so I just write what to write </td>
-			<td> 4 </td>
-			</tr>
-			<tr>
-			<td>124dh3</td>
-			<td>Popeye</td>
-			<td>Technical I don't know what to write so I just write what to write </td>
-			<td> 12 </td>
-			</tr>
-			<tr>
-			<td>373gh27</td>
-			<td>Jimmy John</td>
-			<td>Technical I don't know what to write so I just write what to write </td>
-			<td> 11 </td>
-			</tr>
-		</tbody>
-		
-	</table>
+<div class="container-fluid">
+	<h3> Open projects from the Orgnizations </h3>
+	<div class="table-responsive">
+		<table class ="table table-hover" id="forum">
+			<script type="text/javascript" src="mustache.js" > </script>
+			<script type="text/html" src="template.html" >  </script>
+			<script id="projects-template" type="text/template"></script>
+		</table>
+	</div>
 </div>	
 
 <!-- Contact -->
